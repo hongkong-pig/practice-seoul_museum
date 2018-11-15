@@ -1,0 +1,613 @@
+@charset "utf-8";
+
+/*common start*/
+body{
+    width: 100%;
+    min-width: 1200px;
+    text-align: center;
+    position: relative;
+    font-family: 'NotoSans', sans-serif;
+}
+#wrap{
+    width: 1200px;
+    min-height: 1500px;
+    margin: 25px 0;
+/*    height: 1500px;*/
+    display: inline-block;
+    
+    border: 1px #000 solid;
+    background-color: #fff;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
+    position: relative;
+}
+#wrap .mobile{
+    display: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+select{
+    text-indent: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url(../images/icon/select_arrow.png) no-repeat;
+    background-size: 30px;
+    background-position: 95% center;
+}
+
+/*header start*/
+#header{
+    width: 200px;
+    height: 100%;
+    margin-right: -1px;
+    border-right: 1px solid #000; 
+    float: left;
+    position: relative;
+}
+.header_wrap{
+    height: 1500px;
+}
+#header h1{
+    padding: 40px 0;
+}
+#home{
+    border-bottom: 1px #000 solid;
+    margin-bottom: -1px;
+}
+
+.gnb{
+    height: calc(100% - 715px);
+    line-height: 801px;
+    text-align: left;
+}
+.gnb ul{
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.gnb ul li{
+    text-indent: 15px;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.gnb ul li a{
+    font-size: 24px;
+    font-weight: 400;
+    display: block;
+    color: #000;
+}
+.gnb ul li a span{
+    border-bottom: 1px solid #fff;
+    transition: border 0.3s;
+}
+.gnb ul li:hover a span{
+    border-bottom: 1px solid #000;
+}
+
+.pannel{
+    width: 12vw;
+    height: 12vw;
+    position: relative;
+    
+/*
+    top: 50%;
+    margin-top: -6vw;
+    left: 0;
+    position: absolute;
+*/
+    display: inline-block;
+/*
+    width: 77px;
+    height: 77px;
+    left: 0;
+    top: 0;
+    position: absolute;
+*/
+}
+.pannel a{
+    width: 100%;
+    left: 0;
+    top: 50%;
+    margin-top: -3vw;
+    position: absolute;
+}
+.pannel a span, .pannel a:before, .pannel a:after{
+    content: "";
+    display: block;
+    width: 6vw;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #000;
+}
+.pannel a span{
+    margin: 2vw auto;
+    text-indent: -9999px;
+}
+
+.quick_menu .buttons{
+    padding: 15px 16px;
+}
+.quick_menu .buttons li{
+    float: left;
+    margin-right: 18px;
+}
+.quick_menu .buttons img{
+    display: block;
+}
+.quick_menu .buttons li.mr0 {
+    margin-right: 0;
+}
+.quick_menu .buttons li.mb16{
+    margin-bottom: 16px;
+}
+.quick_menu .buttons li p{
+    height: 30px;
+    line-height: 30px;
+    text-align-last: center;
+}
+.quick_menu .buttons img{
+    width: 75px;
+    height: 75px;
+}
+.quick_menu:before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #000;
+}
+
+#wrap #header .m_menu{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    left: -100%;
+    top: 0;
+    z-index: 100;
+    transition: all 0.5s ease-out;
+    position: fixed;
+}
+#wrap #header .m_menu.clicked{
+    left: 0;
+}
+#wrap #header .m_menu.closed{
+    left: -100%;
+}
+.m_header{
+    /*header height is 20vw because 4vw for padding, 16vw for logo.
+    original logo size is 200x105px*/
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #000;
+    margin-bottom: -1px;
+}
+#header .m_menu h1{
+    padding: 2vw 0;
+}
+.m_header .button_close{
+    width: 12vw;
+    height: 12vw;
+    
+    background: url(../images/icon/button_close.png) no-repeat;
+    background-size: 50%;
+    background-position: center;
+    
+    top: 50%;
+    margin-top: -6vw;
+    left: 0;
+    position: absolute;
+}
+.m_menu h1 a{
+    display: block;
+}
+.m_menu h1 img{
+    width: 30vw;
+}
+
+.m_gnb{
+    height: calc(100% - 57.5vw);
+    padding: 4vw 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.m_gnb li{
+    padding: 2vw;
+}
+.m_gnb li a{
+    font-size: 5vw;
+    font-weight: 400;
+    display: block;
+    color: #000;
+}
+
+.m_footer{
+    /*logo height is 8.5vw(involve padding), footer_bottom height is 29vw (involve padding). so total is 37.5vw*/ 
+    height: 33.5vw;
+}
+.m_footer_bottom{
+    font-weight: 300;
+    padding: 2vw;
+    background: #000;
+    height: 25vw;
+    line-height: 25vw;
+}
+.m_footer_bottom .left{
+    width: 50%;
+    text-align: left;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 3vw;
+    color: #fff;
+}
+.m_footer_bottom .terms a{
+    color: #fff;
+}
+.m_footer_bottom .right{
+    width: 50%;
+    text-align: right;
+    line-height: normal;
+    vertical-align: bottom;
+    display: inline-block;
+}
+.m_footer_bottom .buttons li{
+    text-align: center;
+    display: inline-block;
+    margin-left: 2vw;
+}
+.m_footer_bottom .buttons li a{
+    width: 10vw;
+    height: 10vw;
+    text-align: center;
+    display: inline-block;
+    background-color: #003663;
+}
+.m_footer_bottom .buttons li a img{
+    width: 100%;
+}
+.m_footer_bottom .right .copyright{
+    font-size: 2.5vw;
+    margin-top: 2vw;
+    color: #fff;
+}
+
+/*container start*/
+#container{
+    border-left: 1px #000 solid;
+    width: 899px;
+    float: left;
+    font-size: 0;
+}
+.page_info_wrap .title{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 50px 0;
+}
+.museum_list{
+    display: inline-block;
+}
+.museum_list li{
+    width: 78px;
+    height: 78px;
+    margin-bottom: -1px;
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid #7f7f7f;
+    background-color: #7f7f7f;
+    transition: background 0.3s linear;
+}
+.museum_list li.selected{
+    background-color: #fff;
+    border: 1px solid #000000;
+}
+.icon_total{
+    background: url(../images/icon/total.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_01{
+    background: url(../images/icon/museum_01.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_02{
+    background: url(../images/icon/museum_02.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_03{
+    background: url(../images/icon/museum_03.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_04{
+    background: url(../images/icon/museum_04.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_05{
+    background: url(../images/icon/museum_05.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_06{
+    background: url(../images/icon/museum_06.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_07{
+    background: url(../images/icon/museum_07.png) no-repeat;
+    background-size: 100%;
+}
+.icon_museum_08{
+    background: url(../images/icon/museum_08.png) no-repeat;
+    background-size: 100%;
+}
+.icon_activity_01{
+    background: url(../images/icon/activity_01.png) no-repeat;
+    background-size: 100%;
+}
+.icon_activity_02{
+    background: url(../images/icon/activity_02.png) no-repeat;
+    background-size: 100%;
+}
+.icon_activity_03{
+    background: url(../images/icon/activity_03.png) no-repeat;
+    background-size: 100%;
+}
+.icon_progress_01{
+    background: url(../images/icon/progress_01.png) no-repeat;
+    background-size: 100%;
+}
+.icon_progress_02{
+    background: url(../images/icon/progress_02.png) no-repeat;
+    background-size: 100%;
+}
+.icon_progress_03{
+    background: url(../images/icon/progress_03.png) no-repeat;
+    background-size: 100%;
+}
+.icon_arrow{
+    background: url(../images/icon/arrow.png) no-repeat;
+    background-size: 100%;
+}
+.icon_submenu_01{
+    background: url(../images/icon/submenu_01.png) no-repeat;
+    background-size: 100%;
+}
+.icon_submenu_02{
+    background: url(../images/icon/submenu_02.png) no-repeat;
+    background-size: 100%;
+}
+.icon_submenu_03{
+    background: url(../images/icon/submenu_03.png) no-repeat;
+    background-size: 100%;
+}
+.icon_submenu_04{
+    background: url(../images/icon/submenu_04.png) no-repeat;
+    background-size: 100%;
+}
+
+.button_left{
+    width: 24px;
+    height: 44px;
+    background: url(../images/icon/button_left.png) no-repeat;
+    background-size: 100%;
+}
+.button_right{
+    width: 24px;
+    height: 44px;
+    background: url(../images/icon/button_right.png) no-repeat;
+    background-size: 100%;
+}
+.button_down{
+    width: 44px;
+    height: 24px;
+    background: url(../images/icon/button_down.png) no-repeat;
+    background-size: 100%;
+}
+.button_close{
+    width: 44px;
+    height: 44px;
+    background: url(../images/icon/button_close_white.png) no-repeat;
+    background-size: 100%;
+}
+.button_play{
+    width: 44px;
+    height: 44px;
+    background: url(../images/icon/button_play.png) no-repeat;
+    background-size: 100%;
+}
+.button_previous_5{
+    background: url(../images/icon/button_previous_5.png) no-repeat;
+}
+.button_previous_1{
+    background: url(../images/icon/button_previous.png) no-repeat;
+}
+.button_next_1{
+    background: url(../images/icon/button_next.png) no-repeat;
+}
+.button_next_5{
+    background: url(../images/icon/button_next_5.png) no-repeat;
+}
+.bg_cinema{
+    background: url(../images/common/bg_cinema.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.museum_list li.last{
+    margin-right: 0;
+}
+.museum_list li.selected{
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.museum_list li:hover{
+    border: 1px solid #444;
+    background-color: #444;
+}
+.museum_list a{
+    display: block;
+    height: 100%;
+}
+.museum_list{}
+
+/*footer start*/
+#footer{
+    width: 100px;
+    height: 100%;
+    float: left;
+    background-color: #000;
+    right: 0;
+    position: absolute;
+}
+.footer_wrap{
+    height: 1500px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+}
+#footer .buttons{
+    width: 100%;
+    height: 500px;
+    margin-top: 39px;
+    border-top: 1px solid #fff;
+}
+#footer .buttons li{
+    text-align: center;
+}
+#footer .buttons li a{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #003663;
+}
+#footer .buttons li a img{
+    width: 100%;
+}
+
+#footer .terms_wrap{
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid #fff;
+}
+#footer .terms{
+    margin-top: 20px;
+    width: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-block;
+}
+#footer .terms a{
+    width: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    color: #fff;
+}
+#footer .terms .first:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+#footer .contact_wrap{
+    width: 100%;
+    height: 324px;
+    padding-top: 15px;
+    text-align: left;
+    writing-mode: vertical-rl;
+    -ms-writing-mode:tb-rl;
+    border-top: 1px solid #fff;
+}
+#footer .copyright{
+    width: 100%;
+    height: 329px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: right;
+    writing-mode: vertical-rl;
+    -ms-writing-mode:tb-rl;
+    border-bottom: 1px solid #fff;
+}
+
+/*max width:768*/
+@media screen and (max-width:768px) {
+    body{
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
+        font-size: 0;
+    }
+    #wrap{
+        width: auto;
+        min-height: 100%;
+        margin: 0;
+        box-shadow: 0 0;
+        border: 0;
+    }
+    #wrap .mobile{
+        display: inline-block;
+    }
+    
+    /*header start*/
+    #header{
+        width: 100%;
+        height: auto;
+        padding: 2vw 0;
+        overflow: hidden;
+        float: none;
+        
+        border: 0;
+        border-bottom: 1px solid #000;
+        background-color: #fff;
+        
+        z-index: 100;
+        position: absolute;
+    }
+    .header_wrap{
+        height: auto;
+    }
+    #wrap .web, #header .quick_menu:before{
+        display: none;
+    }
+    .quick_menu_wrap{
+        margin-left: 4vw;
+        display: inline-block;
+    }
+    .quick_menu{
+        margin-right: 2vw;
+        display: inline-block;
+    }
+    .quick_menu .buttons{
+        padding: 0;
+    }
+
+    #header .quick_menu .buttons li{
+        margin-right: 2vw;
+    }
+    #header .quick_menu .buttons li:last-child{
+        margin-right: 0;
+    }
+    #header .quick_menu .buttons li.mb16{
+        margin-bottom: 0;
+    }
+    #header .quick_menu .buttons li img{
+        width: 12vw;
+        height: 12vw;
+    }
+    .quick_menu .buttons li p{
+        display: none;
+    }
+    
+    #container{
+        margin-top: 16vw;
+        width: 100vw;
+        border: 0;
+        float: none;
+        position: relative;
+    }
+    
+    #footer{
+        display: none;
+    }
+}

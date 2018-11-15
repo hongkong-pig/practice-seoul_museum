@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+.info_wrap{
+    padding: 15px;
+    overflow: hidden;
+}
+.info_wrap .text_wrap .title{
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.info_wrap .text_wrap .sub_title{
+    font-size: 23px;
+    font-weight: 200;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.video_wrap{
+    margin-top: 25px;
+}
+.video_wrap .bg_cinema{
+    width: 100%;
+    height: 40px;
+}
+.video_wrap .image_wrap{
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+.video_wrap .image_wrap .button_play{
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    background-size: 100%;
+}
+
+.post_wrap{
+    width: 100%;
+}
+.post_box{
+    float: left;
+    width: 390px;
+    margin-right: 18px;
+    font-size: 16px;
+    text-align: left;
+}
+.post_box.mr0{
+    margin-right: 0;
+}
+.post_box .text_wrap{
+    margin-top: 25px;
+    padding: 20px 10px;
+    
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.post_box.mr0 .text_wrap{
+    padding: 0;
+    padding-top: 20px;
+}
+.post_box.mr0 .text_wrap .label{
+    background: #000;
+    padding: 10px;
+    color: #fff;
+}
+.post_box.mr0 .text_wrap .label .title{
+    font-size: 20px;
+}
+.post_box.mr0 .text_wrap .author_list{
+    padding: 10px 10px 20px 10px;
+}
+
+/*max width:768*/
+@media screen and (max-width:768px) {
+    .video_wrap{
+        margin-top: 4vw;
+    }
+    .video_wrap .bg_cinema{
+        width: 100%;
+        height: 6vw;
+    }
+    .video_wrap .image_wrap{
+        width: 100%;
+        height: 55vw;
+        position: relative;
+    }
+    .video_wrap .image_wrap .button_play{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .post_wrap{
+        width: 100%;
+    }
+    .post_box{
+        width: calc(100%);
+        margin-right: 0;
+        font-size: 4vw;
+    }
+    .post_box.mr0{
+        margin-right: 0;
+    }
+    .post_box .text_wrap{
+        margin-top: 4vw;
+        padding: 4vw 2vw;
+    }
+    .post_box.mr0 .text_wrap{
+        padding-top: 4vw;
+    }
+    .post_box.mr0 .text_wrap .label{
+        padding: 2vw;
+    }
+    .post_box.mr0 .text_wrap .label .title{
+        font-size: 6vw;
+    }
+    .post_box.mr0 .text_wrap .author_list{
+        padding: 2vw 2vw 4vw 2vw;
+    }
+}

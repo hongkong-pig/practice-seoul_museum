@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+.info_wrap{
+    padding: 15px;
+    overflow: hidden;
+}
+.info_wrap .text_wrap{
+    width: 80%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_wrap .text_wrap .title{
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.info_wrap .text_wrap .sub_title{
+    font-size: 23px;
+    font-weight: 200;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_wrap .button_wrap{
+    width: 20%;
+    font-size: 18px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_wrap .button_wrap .button_play{
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.picture_list{}
+.picture_list li{
+    padding: 17px 17px 0 17px;
+    margin-right: 22px;
+    margin-top: 22px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.picture_list li.mr0{
+    margin-right: 0;
+}
+.picture_list li a{
+    height: 100%;
+    display: block;
+}
+.picture_list li a p{
+    line-height: 50px;
+    text-align: right;
+    font-size: 15px;
+}
+.picture_list .image_wrap{
+    /*original size is 345px X 300px*/
+    width: 350px;
+    height: 298px;
+    border: 1px solid #000;
+}
+.picture_list .text_wrap{
+    margin-top: 25px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.picture_list .text_wrap .line{
+    content: "";
+    display: block;
+    margin-top: 30px;
+    height: 1px;
+    margin-bottom: -1px;
+    background-color: #000;
+}
+.picture_list .text_wrap .text_box{
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+
+.navigator{
+    width: 100%;
+    bottom: 40px;
+    left: 0;
+    position: absolute;
+}
+.navigator li{
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+}
+.navigator li a{
+    height: 100%;
+    display: block;
+    font-size: 25px;
+    font-style: italic;
+    margin: 0 8px;
+}
+.navigator li a.selected{
+    font-size: 35px;
+    border-bottom: 2px solid #000;
+}
+.navigator li .button{
+    width: 30px;
+    height: 30px;
+    margin: 0 3px;
+}
+
+
+.popup_background{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+}
+.popup_box{
+    padding: 100px 50px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(0,0,0,0.5);
+    margin: 200px auto 0 auto;
+    position: relative;
+}
+.popup_box .image_wrap{
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+}
+.popup_box .button_wrap{
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+}
+.popup_box .button_close{
+    top: 28px;
+    right: 28px;
+    position: absolute;
+}
+.popup_box .button_left{
+    float: left;
+    margin-left: 13px;
+}
+.popup_box .button_right{
+    float: right;
+    margin-right: 13px;
+}
+
+.popup_text_wrap{
+    margin-top: 20px;
+    max-width: 870px;
+    background: #fff;
+    text-align: left;
+}
+.popup_text_wrap .line{
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.popup_text_wrap .play_button_wrap{
+    padding: 10px;
+    text-align: right;
+    font-size: 18px;
+    display: block;
+}
+.popup_text_wrap .play_button_wrap .button_play{
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.popup_text_wrap .text_wrap{
+    padding: 10px;
+}
+.popup_text_wrap .text_wrap .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*max width:768*/
+@media screen and (max-width:768px) {
+    .picture_list{
+        width: 100%;
+        margin-bottom: 30vw;
+    }
+    .picture_list li{
+        width: calc(50% - 5vw - 2px);
+        padding: 2vw 2vw 0 2vw;
+        margin-right: 2vw;
+        margin-top: 4vw;
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid #000;
+    }
+    .picture_list li.mr0{
+        margin-right: 0;
+    }
+    .picture_list li a{
+        height: 100%;
+        display: block;
+    }
+    .picture_list li a p{
+        line-height: normal;
+        line-height: 10vw;
+        font-size: 3vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .picture_list .image_wrap{
+        width: 100%;
+        height: 40vw;
+        border: 1px solid #000;
+    }
+    
+    .navigator{
+        width: 100%;
+        bottom: 6vw;
+    }
+    .navigator li{
+        display: inline-block;
+        vertical-align: middle;
+        color: #000;
+    }
+    .navigator li a{
+        font-size: 6vw;
+        margin: 0 2vw;
+    }
+    .navigator li a.selected{
+        font-size: 8vw;
+        border-bottom: 2px solid #000;
+    }
+    .navigator li .button{
+        width: 7vw;
+        height: 7vw;
+        margin: 0 1vw;
+        background-size: 100%;
+    }
+    
+    .popup_box{
+        width: 100%;
+        height: 132vw;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0,0,0,0);
+/*        top: 10vw;*/
+        top: 50%;
+        margin-top: -61vw;
+        left: 0;
+        position: fixed;
+    }
+    .popup_box .image_wrap{
+        width: 100vw;
+        height: 80vw;
+    }
+    .popup_box .button_close{
+        top: -10vw;
+        right: 2vw;
+        width: 8vw;
+        height: 8vw;
+        background-size: 100%;
+    }
+    .popup_box .button_wrap{
+        width: auto;
+        height: 8vw;
+        margin: 0;
+        top: 124vw;
+        position: absolute;
+    }
+    .popup_box .button_left, .popup_box .button_right{
+        width: 4vw;
+        height: 8vw;
+        display: inline-block;
+        background-size: 100%;
+        background-position: center;
+    }
+    .popup_box .button_wrap .button_left{
+        float: none;
+        margin: 0;
+        margin-right: 10vw;
+    }
+    .popup_box .button_wrap .button_right{
+        float: none;
+        margin: 0;
+    }
+    
+    .popup_text_wrap{
+        margin-top: 2vw;
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid #000;
+    }
+    .popup_text_wrap .line{
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    .popup_text_wrap .play_button_wrap{
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    .popup_text_wrap .play_button_wrap .button_play{
+        width: 7vw;
+        height: 7vw;
+        margin-left: 2vw;
+    }
+    .popup_text_wrap .text_wrap{
+        height: 25vw;
+        overflow-y: scroll;
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    .popup_text_wrap .text_wrap .title{
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+}

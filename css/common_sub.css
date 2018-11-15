@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/************************* submenu common **************************/
+
+#wrap .active_page, #wrap .active_button{
+    z-index: 10;
+}
+
+.submenu_01{
+    background: #ebebeb;
+    border: 1px solid #000;
+    z-index: 4;
+}
+.submenu_02{
+    background: #cccccc;
+    border: 1px solid #000;
+    z-index: 3;
+}
+.submenu_03{
+    background: #a1a1a1;
+    border: 1px solid #000;
+    z-index: 2;
+}
+.submenu_04{
+    background: #858585;
+    border: 1px solid #000;
+    z-index: 1;
+}
+
+.sub_page_info_wrap{
+    width: 880px;
+    height: 79px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 40px;
+    line-height: 79px;
+}
+.sub_page_info_wrap .title{
+    width: 480px;
+    text-align: center;
+    line-height: normal;
+    font-size: 30px;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+}
+.submenu_list{
+    width: 350px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.submenu_list li{
+    display: inline-block;
+    width: 78px;
+    height: 109px;
+    margin-bottom: -1px;
+    position: absolute;
+    top: 0;
+}
+/*
+.submenu_list li:after{
+    content: "";
+    display: block;
+    width: 78px;
+    height: 30px;
+    margin-left: -1px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    background-color: #636363;
+}
+*/
+.submenu_list li.submenu_01{
+    left: 0;
+}
+.submenu_list li.submenu_02{
+    left: 90px;
+}
+.submenu_list li.submenu_03{
+    left: 180px;
+}
+.submenu_list li.submenu_04{
+    left: 270px;
+}
+.submenu_list li a{
+    height: 100%;
+    display: block;
+}
+
+.content_wrap{
+    width: 848px;
+    padding: 0 15px;
+    display: inline-block;
+    position: relative;
+}
+.content_wrap>div{
+    width: 798px;
+    padding: 25px;
+    border: 1px solid #000;
+    min-height: 1290px;
+    position: absolute;
+}
+.content_wrap .submenu_01{
+    top: 0px;
+    left: 0px;
+}
+.content_wrap .submenu_02{
+    top: 10px;
+    left: 10px;
+}
+.content_wrap .submenu_03{
+    top: 20px;
+    left: 20px;
+}
+.content_wrap .submenu_04{
+    top: 30px;
+    left: 30px;
+}
+.content_wrap .info_wrap{
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+/*max width:768*/
+@media screen and (max-width:768px) {
+    #wrap .active_page {
+        width: 100%;
+        min-height: calc(100vh - 43vw - 1px);
+        display: block;
+        box-sizing: border-box;
+        padding: 4vw;
+        position: static;
+    }
+    .content_wrap{
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        border: 0;
+    }
+    .content_wrap>div{
+        display: none;
+    }
+    
+    .submenu_01, .submenu_02, .submenu_03, .submenu_04{
+        position: static;
+    }
+
+    .sub_page_info_wrap{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 0;
+        line-height: normal;
+    }
+    .sub_page_info_wrap .title{
+        width: 100%;
+        font-size: 5vw;
+        line-height: 5vw;
+        margin: 4vw 0;
+    }
+    .submenu_list{
+        width: 100%;
+        height: calc(14vw - 1px);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .submenu_list li{
+        display: inline-block;
+        width: 14vw;
+        height: calc(14vw - 1px);
+        margin-right: 2vw;
+        position: static;
+    }
+    
+    .content_wrap .info_wrap{
+        padding: 2vw;
+        overflow: hidden;
+    }
+    .content_wrap .info_wrap .text_wrap{
+        width: 60%;
+        text-align: left;
+    }
+    .content_wrap .info_wrap .text_wrap .title{
+        font-size: 5vw;
+        margin-right: 4vw;
+    }
+    .content_wrap .info_wrap .text_wrap .sub_title{
+        font-size: 4vw;
+        margin-right: 4vw;
+    }
+    .content_wrap .info_wrap .button_wrap{
+        width: 40%;
+        font-size: 4vw;
+        text-align: right;
+        vertical-align: bottom;
+        height: auto;
+    }
+    .content_wrap .info_wrap .button_wrap .button_play{
+        width: 7vw;
+        height: 7vw;
+        margin-left: 2vw;
+    }
+    body .popup_background{
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+/************************* submenu common **************************/

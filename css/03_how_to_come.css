@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+.content_wrap{
+    width: 848px;
+    min-height: 1250px;
+    margin-bottom: 25px;
+    display: inline-block;
+    border: 1px solid #000;
+    position: relative;
+}
+.info_wrap{
+    padding: 10px;
+}
+.info_wrap span{
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_wrap .text_wrap{
+    width: 668px;
+    padding: 0 10px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_wrap .text_wrap .title{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.info_wrap .text_wrap p{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.map_wrap{
+    width: 100%;
+    height: 498px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.map_wrap iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.transportation_list{}
+.transportation_list li{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+.transportation_list li.last{
+    border: 0;
+}
+.transportation_list li h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.transportation_list li p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.parking_table_wrap{
+    margin-top: 20px;
+    border: 1px solid #000;
+}
+.parking_table_wrap ul{
+    overflow: hidden;
+}
+.parking_table_wrap ul.table_title{
+    font-weight: 600;
+}
+.parking_table_wrap ul li{
+    padding: 10px;
+    float: left;
+    font-size: 15px;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+.parking_table_wrap ul.last li{
+    border: 0;
+}
+.parking_table_wrap ul li.col_01{
+    width: 128px;
+}
+.parking_table_wrap ul li.col_02{
+    width: 313px;
+    border-left: 1px solid #000;
+}
+.parking_table_wrap ul li.col_03{
+    width: 313px;
+    border-left: 1px solid #000;
+}
+.parking_table_wrap ul li.col_02_03{
+    width: 647px;
+    border-left: 1px solid #000;
+}
+
+
+/*max width:768*/
+@media screen and (max-width:768px) {
+    .content_wrap{
+        width: calc(100% - 2px);
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .page_info_wrap{
+        padding-top: 5vw;
+        background-color: #fff;
+    }
+    .page_info_wrap .title{
+        display: none;
+    }
+    .museum_list li{
+        width: calc(12vw - 2px);
+        height: calc(12vw - 2px);
+        margin-right: 1vw;
+    }
+    .museum_list li:last-child{
+        margin-right: 0;
+    }
+    
+    .info_wrap .text_wrap .title, .info_wrap .text_wrap p{
+        height: auto;
+        text-align: center;
+        line-height: normal;
+        font-size: 5vw;
+    }
+    .info_wrap .text_wrap{
+        margin-top: 2vw;
+        width: 100%;
+        padding: 0;
+    }
+    .info_wrap span{
+        width: 14vw;
+        height: 14vw;
+    }
+    
+    .map_wrap{
+        width: 100%;
+        height: 55vw;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+    .map_wrap iframe{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .transportation_list li{
+        padding: 2vw;
+    }
+    .transportation_list li h3{
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+    .transportation_list li p{
+        font-size: 4vw;
+    }
+
+
+    .parking_table_wrap{
+        margin-top: 4vw;
+    }
+    .parking_table_wrap ul li{
+        padding: 2vw;
+        float: left;
+        font-size: 4vw;
+    }
+    .parking_table_wrap ul li.col_01{
+        width: 30%;
+        box-sizing: border-box;
+    }
+    .parking_table_wrap ul li.col_02{
+        width: 35%;
+        box-sizing: border-box;
+    }
+    .parking_table_wrap ul li.col_03{
+        width: 35%;
+        box-sizing: border-box;
+    }
+    .parking_table_wrap ul li.col_02_03{
+        width: 70%;
+        box-sizing: border-box;
+    }
+
+}
