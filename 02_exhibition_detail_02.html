@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>서울시립미술관</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" /> 
+        
+        <link href="./font/fonts.css" rel="stylesheet" type="text/css">
+        <link href="./css/default.css" rel="stylesheet" type="text/css">
+        <link href="./css/include.css" rel="stylesheet" type="text/css">
+        <link href="./css/common_sub.css" rel="stylesheet" type="text/css">
+        <link href="./css/02_exhibition_detail_02.css" rel="stylesheet" type="text/css">
+        
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/include.js" type="text/javascript"></script>
+        <script src="./js/object-fit.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function popup(src, title, content){
+                $popup = $(".popup_background");
+                $imgs = $(".popup_background .image_wrap img");
+                $title = $(".popup_text_wrap .text_wrap .title")
+                $content = $(".popup_text_wrap .text_wrap .content")
+                if($popup.length>0 && $imgs.length>0 && 
+                   $title.length>0 && $content.length>0) {
+                    $popup.eq(0).css("display", "block");
+                    $imgs.eq(0).attr("src", src);
+                    resizeElement($imgs.get(0));
+                    $title.html(title);
+                    $content.html(content);
+                }
+            }
+            function popdown(){
+                $popup = $(".popup_background");
+                if($popup.length>0) {
+                    $popup.eq(0).css("display", "none");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="popup_background">
+            <div class="popup_box">
+                <a class="button_close" href="#" onclick="popdown()"></a>
+                <div class="image_wrap">
+                    <img src="./images/img/activity_01.jpg" alt="이미지 상세 01"/>
+                </div>
+                <div class="popup_text_wrap">
+                    <span class="play_button_wrap">재생하기<a class="button_play" href="#"></a></span>
+                    <div class="line"></div>
+                    <div class="text_wrap">
+                        <p class="title">이소요, [회양목]</p>
+                        <p class="content">
+                            이소요의 [회양목]은 지난 2018년 3월 회양목 세 그루를 남서울미술관 마당 실외기 앞에서 발견하며 시작되었다. 봄에는 작은 꽃을 피우고 여름에는 갈색 삭과를 맺는 회양목은 도시 조경수로 자주 활용되는 식물이다. 에어컨 작동 시 발생하는 뜨거운 인공바람이 있는 특수한 환경에서 자라는 미술관의 회양목은 전시 종료 기간까지 연구 될 예정이다. 관람객은 미술관 야외에 설치된 CCTV와 날씨 측정기의 수치를 통해 인위적인 환경으로 인해 생태계가 변화하는 양상을 직접 목격할 수 있다.
+                            
+                            이소요의 [회양목]은 지난 2018년 3월 회양목 세 그루를 남서울미술관 마당 실외기 앞에서 발견하며 시작되었다. 봄에는 작은 꽃을 피우고 여름에는 갈색 삭과를 맺는 회양목은 도시 조경수로 자주 활용되는 식물이다. 에어컨 작동 시 발생하는 뜨거운 인공바람이 있는 특수한 환경에서 자라는 미술관의 회양목은 전시 종료 기간까지 연구 될 예정이다. 관람객은 미술관 야외에 설치된 CCTV와 날씨 측정기의 수치를 통해 인위적인 환경으로 인해 생태계가 변화하는 양상을 직접 목격할 수 있다.
+                            이소요의 [회양목]은 지난 2018년 3월 회양목 세 그루를 남서울미술관 마당 실외기 앞에서 발견하며 시작되었다. 봄에는 작은 꽃을 피우고 여름에는 갈색 삭과를 맺는 회양목은 도시 조경수로 자주 활용되는 식물이다. 에어컨 작동 시 발생하는 뜨거운 인공바람이 있는 특수한 환경에서 자라는 미술관의 회양목은 전시 종료 기간까지 연구 될 예정이다. 관람객은 미술관 야외에 설치된 CCTV와 날씨 측정기의 수치를 통해 인위적인 환경으로 인해 생태계가 변화하는 양상을 직접 목격할 수 있다.
+                        </p>
+                    </div>
+                </div>
+                <div class="button_wrap">
+                    <a class="button_left" href="#"></a>
+                    <a class="button_right" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+            <header id="header">
+            </header>
+
+            <div id="container">
+                <div class="sub_page_info_wrap">
+                    <h2 class="title">음성안내</h2>
+                    <ul class="submenu_list">
+                        <li class="submenu_01">
+                            <a class="icon_submenu_01" href="./02_exhibition_detail_01.html"></a>
+                        </li>
+                        <li class="submenu_02 active_button">
+                            <a class="icon_submenu_02" href="./02_exhibition_detail_02.html"></a>
+                        </li>
+                        <li class="submenu_03">
+                            <a class="icon_submenu_03" href="./02_exhibition_detail_03.html"></a>
+                        </li>
+                        <li class="submenu_04">
+                            <a class="icon_submenu_04" href="./02_exhibition_detail_04.html"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content_wrap">
+                    <div class="submenu_01"></div>
+                    <div class="submenu_02 active_page">
+                        <div class="info_wrap">
+                            <div class="text_wrap">
+                                <span class="title">날씨의 맛</span>
+                                <span class="sub_title">18.06.12-18.09.30</span>
+                            </div>
+                            <span class="button_wrap">전체듣기<a class="button_play" href="#"></a></span>
+                        </div>
+                        <ul class="picture_list">
+                            <li>
+                                <a href="#" onclick="popup('./images/img/activity_01_04.jpg','이소요, [회양목]','이소요의 [회양목]은 지난 2018년 3월 회양목 세 그루를 남서울미술관 마당 실외기 앞에서 발견하며 시작되었다. 봄에는 작은 꽃을 피우고 여름에는 갈색 삭과를 맺는 회양목은 도시 조경수로 자주 활용되는 식물이다. 에어컨 작동 시 발생하는 뜨거운 인공바람이 있는 특수한 환경에서 자라는 미술관의 회양목은 전시 종료 기간까지 연구 될 예정이다. 관람객은 미술관 야외에 설치된 CCTV와 날씨 측정기의 수치를 통해 인위적인 환경으로 인해 생태계가 변화하는 양상을 직접 목격할 수 있다.')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_04.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>이소요, [회양목]</p>
+                                </a>
+                            </li>
+                            <li class="mr0">
+                                <a href="#" onclick="popup('./images/img/activity_01_05.jpg','정화용 ·김형중, [에코트론 V2.0]','대기오염 수치는 이제 하나의 날씨 정보로써 예측되고 측량된다. 정화용·김형중은 최근 심각한 문제로 떠오른 미세먼지에 주목하고, 이를 먹고 자라는 가상의 유기적 생물체 에코트론을 탄생시켰다. 에코트론은 실시간으로 측정되는 서울의 미세먼지 수치에 따라 반응한다. 먼지 수치가 높을수록 변화하는 생명체는 환경 문제가 우리 삶에 미치는 영향에 대한 경각심을 불러일으킨다.')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_05.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>정화용 ·김형중, [에코트론 V2.0]</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="popup('./images/img/activity_01.jpg','임영주, [무드]','임영주는 [대체로 맑음]을 통해 날씨에 대한 다양한 사회적 인식을 보여준다. 작가는 데이터를 기반으로 한 기상 예보에서 ‘대체로’라는 애매모호한 부사를 사용하며 전달하는 막연함을 꼬집는다. 과거의 기상예보가 사실 전달을 위해 당일의 날씨를 전했던 반면, 현재의 기상예보는 미래의 날씨를 예견하여 송출한다는 점에서 마치 주술과 같은 속성을 지님을 포착하였다. 이번 전시에서 선보이는 신작 [무드]에서는 긴급 재난문자 수신음과 함께 “당신도 그렇습니까?”라는 질문을 반복적으로 던지며, 폭염, 대설, 지진과 같은 재난과 관련된 개인의 기억을 더듬도록 유도한다. [대체로 맑음]의 일기예보가 4월16일이라는 점 그리고 “그때를 생각나게 한다.”라는 [무드] 속 언급은 개인의 기억뿐 아니라 사회 전체를 슬픔에 빠뜨린 특정 사고와 당일의 날씨를 상기시킨다.')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>임영주, [무드]</p>
+                                </a>
+                            </li>
+                            <li class="mr0">
+                                <a href="#" onclick="popup('./images/img/activity_01_06.jpg','백정기 [기우제: 마하미드]','백정기는 스스로가 기우제를 드리는 제사장이 된다. [기우제: 마하미드]에서는 날씨를 관장하는 용을 닮은 도마뱀을 제물로 죽여 이에 용이 노해 비를 내리게 했다던 조선 시대의 기우제 방식과 바셀린의 치유능력에 대한 작가의 경험을 혼합하여 제사를 지내는 퍼포먼스를 한다. [기우제: 카이로] 역시 비를 내리게 하는 작가만의 의식으로서, 에어컨 실외기에서 떨어진 물을 모아 사탕이 가득한 필터에 부어 이른바 단비를 만드는 과정을 담고 있다. 마하미드 기우제가 신에게 비는 초월적인 주술적 성격이 두드러진다면, 카이로는 좀 더 현실적이고 위트 있는 느낌의 기우제이다. 이번 전시에서 새롭게 선보이는 [무제]는 자철석과 이로부터 자성을 얻은 바늘로 구성된 나침반이다. 앞서 제시된 두 기우제 퍼포먼스 영상 사이에 위치한 이 오브제는 마치 가뭄에 대한 해결책을 자연 속에서 찾기를 암시하는 듯하다.')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_06.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>백정기 [기우제: 마하미드]</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navigator">
+                            <li><a class="button_previous_5 button" href="#"></a></li>
+                            <li><a class="button_previous_1 button" href="#"></a></li>
+                            <li><a class="selected" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a class="button_next_1 button" href="#"></a></li>
+                            <li><a class="button_next_5 button" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="submenu_03"></div>
+                    <div class="submenu_04"></div>
+                </div>
+            </div>
+
+            <footer id="footer">
+            </footer>
+        </div>
+    </body>
+</html>

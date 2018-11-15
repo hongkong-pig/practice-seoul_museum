@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>서울시립미술관</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" /> 
+        
+        <link href="./font/fonts.css" rel="stylesheet" type="text/css">
+        <link href="./css/default.css" rel="stylesheet" type="text/css">
+        <link href="./css/include.css" rel="stylesheet" type="text/css">
+        <link href="./css/common_sub.css" rel="stylesheet" type="text/css">
+        <link href="./css/02_exhibition_detail_01.css" rel="stylesheet" type="text/css">
+        
+        
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/include.js" type="text/javascript"></script>
+        <script src="./js/object-fit.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function popup(src){
+                $popup = $(".popup_background");
+                $imgs = $(".popup_background .image_wrap img");
+                if($popup.length>0 && $imgs.length>0 && src.length>0) {
+                    $popup.eq(0).css("display", "block");
+                    $imgs.eq(0).attr("src", src);
+                    resizeElement($imgs.get(0));
+                }
+            }
+            function popdown(){
+                $popup = $(".popup_background");
+                if($popup.length>0) {
+                    $popup.eq(0).css("display", "none");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="popup_background">
+            <div class="popup_box">
+                <a class="button_close" href="#" onclick="popdown()"></a>
+                <div class="image_wrap">
+                    <img src="./images/img/activity_01.jpg" alt="이미지 상세 01"/>
+                </div>
+                <div class="button_wrap">
+                    <a class="button_left" href="#"></a>
+                    <a class="button_right" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+            <header id="header">
+            </header>
+
+            <div id="container">
+                <div class="sub_page_info_wrap">
+                    <h2 class="title">전시안내</h2>
+                    <ul class="submenu_list">
+                        <li class="submenu_01 active_button">
+                            <a class="icon_submenu_01" href="./02_exhibition_detail_01.html"></a>
+                        </li>
+                        <li class="submenu_02">
+                            <a class="icon_submenu_02" href="./02_exhibition_detail_02.html"></a>
+                        </li>
+                        <li class="submenu_03">
+                            <a class="icon_submenu_03" href="./02_exhibition_detail_03.html"></a>
+                        </li>
+                        <li class="submenu_04">
+                            <a class="icon_submenu_04" href="./02_exhibition_detail_04.html"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content_wrap">
+                    <div class="submenu_01 active_page">
+                        <div class="info_wrap">
+                            <p class="title">날씨의 맛</p>
+                            <p class="sub_title">18.16.12-18.09.30</p>
+                            <dl>
+                                <dt>장소</dt>
+                                <dd>남서울미술관 1층,2층</dd>
+                            </dl>
+                            <dl>
+                                <dt>관람시간</dt>
+                                <dd>[평일(화-금)] 10AM~8PM [토·일·공휴일] 10AM~6PM [휴관일] 매주 월요일</dd>
+                            </dl>
+                            <dl>
+                                <dt>참여작가</dt>
+                                <dd>김윤수, 김형중, 바이런 킴, 박여주, 백정기, 성유삼, 이소요, 임영주, 정만영, 정화용</dd>
+                            </dl>
+                            <dl>
+                                <dt>장르</dt>
+                                <dd>기획</dd>
+                            </dl>
+                            <dl>
+                                <dt>관람료</dt>
+                                <dd>무료</dd>
+                            </dl>
+                        </div>
+                        <ul class="picture_list">
+                            <li>
+                                <a href="#" onclick="popup('./images/img/activity_01.jpg')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>날씨의맛 18.06.12-18.09.30</p>
+                                </a>
+                            </li>
+                            <li class="mr0">
+                                <a href="#" onclick="popup('./images/img/activity_01_01.jpg')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_01.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>날씨의맛 18.06.12-18.09.30</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="popup('./images/img/activity_01_02.jpg')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_02.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>날씨의맛 18.06.12-18.09.30</p>
+                                </a>
+                            </li>
+                            <li class="mr0">
+                                <a href="#" onclick="popup('./images/img/activity_01_03.jpg')">
+                                    <div class="image_wrap">
+                                        <img class="object_fit" src="./images/img/activity_01_03.jpg" alt="사진 01"/>
+                                    </div>
+                                    <p>날씨의맛 18.06.12-18.09.30</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="text_wrap">
+                            <div class="line"></div>
+                            <div class="text_box">
+                                &lt;날씨의 맛&gt;전은 일상 속의 날씨를 음미하고 날씨와 맺어온 역사와 미래에 대해 숙고하는 기회를 마련하고자 기획되었다. 전시명은 알랭 코르뱅의 「날씨의 맛: 비, 햇빛, 바람, 눈, 안개, 뇌우를 느끼는 감수성의 역사 (La pluie, le soleil et le vent. Une histoire de la sensibilité au temps qu’il fait)」라는 도서명을 인용했다. 이 책의 흥미로운 점은 원제에서는 쓰이지 않은 바로 '맛'이라는 표현이다. ‘맛’은 감수성, 감각, 기억, 생각 등을 함의한다. 시시각각 변하는 날씨에 대해서 개개인은 미묘하게 다르게 받아들이고 기억하기도 하는 한편, 공통적으로 무엇인가를 느끼고 생각하기도 한다.
+                                <br/>
+                                <br/>
+                                롤랑바르트는 ‘날씨만큼 이데올로기적인 것은 없다.’고 하였다. 이의 연장선상에서 우리는 개인의 감정과 삶, 정치와 경제, 종교와 과학, 문명의 성쇠, 인류의 미래 등 광범위한 스펙트럼 속에서 날씨와 관련을 맺고 있다. 본 전시는 현재 우리에게 날씨가 선사하는 대자연의 아름다움을 부여잡기 위한 시도이자 지금까지 우리가 맺어오고 있는 날씨와의 관계에 대한 단상이다. 즉, 가까운 혹은 먼 미래에는 잊힐지 모를 현 시대 ‘날씨’에 대해 우리가 느끼는 ‘맛’에 관한 소고(小考)이다. 
+                                <br/>
+                                <br/>
+                                전시는 크게 두 부분으로 나뉘어져, 감각적으로 인식되는 날씨 관련 요소를 점차 지각적으로 확장하여 인지할 수 있도록 구성되었다. ‘날씨를 맛보다(정만영, 박여주, 바이런 킴, 김윤수)’에서는 일상 속에서 익숙하게 스쳐 지나는 날씨의 편린들을 날 것 그대로 음미한다. 지속적으로 변화하는 날씨 현상과 자연이 어우러진 찰나의 순간이 다양한 감정을 자아낸다. ‘날씨에 맛을 더하다(성유삼, 백정기, 임영주, 김형중⦁정화용, 이소요)’에서는 수동적으로 받아드리는 현상이 아닌, 과거부터 인간의 개입과 관계 맺음을 통해 변화해온 날씨의 다층적 면모에 주목한다. 이번 전시가 날씨에 대한 감각, 감수성, 생각 등을 개인적 나아가 사회적 차원에서 다시 한 번 일깨우는 기회가 되길 기대한다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submenu_02"></div>
+                    <div class="submenu_03"></div>
+                    <div class="submenu_04"></div>
+                </div>
+            </div>
+
+            <footer id="footer">
+            </footer>
+        </div>
+    </body>
+</html>

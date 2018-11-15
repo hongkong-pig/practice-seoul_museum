@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>서울시립미술관</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" /> 
+        
+        <link href="./font/fonts.css" rel="stylesheet" type="text/css">
+        <link href="./css/default.css" rel="stylesheet" type="text/css">
+        <link href="./css/include.css" rel="stylesheet" type="text/css">
+        <link href="./css/01_exhibition_list.css" rel="stylesheet" type="text/css">
+        
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/include.js" type="text/javascript"></script>
+        <script src="./js/object-fit.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function show_list_option() {
+                $('.page_info_wrap').animate({
+                    "top":"0"
+                }, 500);
+                $('.button_option').attr("onclick","close_list_option()");
+                $('.button_option .button_down').css({
+                    "background": "url(./images/icon/button_up.png) no-repeat",
+                    "background-size":"100%",
+                    "background-position":"center"
+                });
+               
+            }
+            function close_list_option() {
+                $('.page_info_wrap').animate({
+                    "top":"-54vw"
+                }, 500);
+                $('.button_option').attr("onclick","show_list_option()");
+                $('.button_option .button_down').css({
+                    "background": "url(./images/icon/button_down.png) no-repeat",
+                    "background-size":"100%",
+                    "background-position":"center"
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+            </header>
+
+            <div id="container">
+                <div class="page_info_wrap">
+                    <h2 class="title">현재전시</h2>
+                    <ul class="museum_list">
+                        <li class="selected">
+                            <a class="icon_total" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_01" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_02" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_03" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_04" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_05" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_06" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon_museum_07" href="#"></a>
+                        </li>
+                        <li class="last">
+                            <a class="icon_museum_08" href="#"></a>
+                        </li>
+                    </ul>
+                    <div class="info_wrap mobile">
+                        <h3 class="title">전체보기</h3>
+                        <div class="options">
+                            <select class="option">
+                                <option selected disabled>검색분야</option>
+                                <option>전시회명</option>
+                                <option>주최 및 후원</option>
+                                <option>참여작가</option>
+                            </select>
+                            <input class="option" type="text" placeholder="검색어 입력"/>
+                        </div>
+                    </div>
+                    <a href="#" class="button_option mobile" onclick="show_list_option()">
+                    <span class="button_down"></span></a>
+                </div>
+                <div class="content_wrap">
+                    <div class="info_wrap web">
+                        <h3 class="title">전체보기</h3>
+                        <div class="options">
+                            <select class="option">
+                                <option selected disabled>검색분야</option>
+                                <option>전시회명</option>
+                                <option>주최 및 후원</option>
+                                <option>참여작가</option>
+                            </select>
+                            <input class="option" type="text" placeholder="검색어 입력"/>
+                        </div>
+                    </div>
+                    <ul class="content_list">
+                        <li>
+                            <div class="image_wrap">
+                                <img class="object_fit" src="./images/img/activity_01.jpg" alt="전시 이미지 01">
+                            </div>
+                            <a class="text_wrap" href="./02_exhibition_detail_01.html">
+                                <p class="title">날씨의 맛</p>
+                                <p class="sub_title">18.16.12-18.09.30</p>
+                                <ul class="content_detail">
+                                    <li class="text_museum">
+                                        <span class="icon_museum_03"></span>
+                                        <p>남서울미술관</p>
+                                    </li>
+                                    <li class="text_activity">
+                                        <span class="icon_activity_01"></span>
+                                        <p>전시</p>
+                                    </li>
+                                    <li class="text_progress">
+                                        <span class="icon_progress_02"></span>
+                                        <p>진행중</p>
+                                    </li>
+                                </ul>
+                                <div class="cover">
+                                    <div>바로가기<span class="icon_arrow"></span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_wrap">
+                                <img class="object_fit"  src="./images/img/activity_02.jpg" alt="전시 이미지 02">
+                            </div>
+                            <a class="text_wrap" href="./02_exhibition_detail_01.html">
+                                <p class="title">영원한 나르시스트, 천경자</p>
+                                <p class="sub_title">상설전시</p>
+                                <ul class="content_detail">
+                                    <li class="text_museum">
+                                        <span class="icon_museum_01"></span>
+                                        <p>서소문본관</p>
+                                    </li>
+                                    <li class="text_activity">
+                                        <span class="icon_activity_01"></span>
+                                        <p>전시</p>
+                                    </li>
+                                    <li class="text_progress">
+                                        <span class="icon_progress_02"></span>
+                                        <p>진행중</p>
+                                    </li>
+                                </ul>
+                                <div class="cover">
+                                    <div>바로가기<span class="icon_arrow"></span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_wrap">
+                                <img class="object_fit" src="./images/img/activity_03.jpg" alt="전시 이미지 03">
+                            </div>
+                            <a class="text_wrap" href="./02_exhibition_detail_01.html">
+                                <p class="title">북서울미술관 개관 5주년 기념전&#60;2018 타이틀 매치: 이형구 vs. 오민&#62;</p>
+                                <p class="sub_title">18.06.12-18.09.3</p>
+                                <ul class="content_detail">
+                                    <li class="text_museum">
+                                        <span class="icon_museum_02"></span>
+                                        <p>북서울미술관</p>
+                                    </li>
+                                    <li class="text_activity">
+                                        <span class="icon_activity_01"></span>
+                                        <p>전시</p>
+                                    </li>
+                                    <li class="text_progress">
+                                        <span class="icon_progress_03"></span>
+                                        <p>종료</p>
+                                    </li>
+                                </ul>
+                                <div class="cover">
+                                    <div>바로가기<span class="icon_arrow"></span></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navigator">
+                        <li><a class="button_previous_5 button" href="#"></a></li>
+                        <li><a class="button_previous_1 button" href="#"></a></li>
+                        <li><a class="selected" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a class="button_next_1 button" href="#"></a></li>
+                        <li><a class="button_next_5 button" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer id="footer">
+            </footer>
+        </div>
+    </body>
+</html>
