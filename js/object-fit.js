@@ -45,13 +45,14 @@ function resizeElement(img) {
 }
 
 function resize() {
-    var imgs = document.getElementsByClassName("object_fit");
+    var imgs = $(".object_fit");
     for(var i= 0; i< imgs.length; ++i) {
         resizeElement(imgs[i]);
-        
     }
+    imgs.css("opacity",1);
 }
-window.onload = function() {
+$(".object_fit").css("opacity",0);
+$(window).on("load", function(){
     resize();
     window.addEventListener('resize', resize);
-};
+})

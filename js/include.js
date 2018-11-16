@@ -1,13 +1,15 @@
 $(document).ready(function(){
-    $("#header").load("./header.html", function(){
-        $(".pannel").click(function(){
-            $(".m_menu").toggleClass("clicked");
-        });
+    $(".m_menu").load("./include/m_menu.html", function(){
         $(".m_menu .button_close").click(function(){
             $(".m_menu").toggleClass("clicked");
         });
     });
-    $("#footer").load("./footer.html");
+    $("#header").load("./include/header.html", function(){
+        $(".pannel").click(function(){
+            $(".m_menu").toggleClass("clicked");
+        });
+    });
+    $("#footer").load("./include/footer.html");
 })
 
 function content_resize(){
