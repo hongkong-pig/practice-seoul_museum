@@ -79,6 +79,9 @@
     width: 360px;
 }
 
+.box{
+    overflow: hidden;
+}
 .box .info{
     width: 100%;
     height: 70px;

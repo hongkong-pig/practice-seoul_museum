@@ -44,14 +44,25 @@ function resizeElement(img) {
 //        img.height*= scale;
 }
 
+
+//function resize() {
+//    var imgs = $(".object_fit");
+//    for(var i= 0; i< imgs.length; ++i) {
+//        resizeElement(imgs.eq(i));
+//    }
+//    imgs.css("opacity",1);
+//}
+//$(window).on("load", function(){
+//    resize();
+//    window.addEventListener('resize', resize);
+//})
+
 function resize() {
     var imgs = $(".object_fit");
     for(var i= 0; i< imgs.length; ++i) {
         resizeElement(imgs[i]);
     }
-    imgs.css("opacity",1);
 }
-$(".object_fit").css("opacity",0);
 $(window).on("load", function(){
     resize();
     window.addEventListener('resize', resize);

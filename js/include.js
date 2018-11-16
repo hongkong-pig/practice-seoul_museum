@@ -34,8 +34,10 @@ function content_resize(){
         }
     }
 }
-
 $(window).on('load', function() {
     content_resize();
     window.addEventListener('resize', content_resize);
+    
+    $("#wrap").css("opacity",1);
+    $(".loading").css("display","none");
 });

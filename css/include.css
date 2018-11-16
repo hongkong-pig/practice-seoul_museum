@@ -8,18 +8,51 @@ body{
     position: relative;
     font-family: 'NotoSans', sans-serif;
 }
+
+.loading{
+    width: 50px;
+    height: 50px;
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    position: fixed;
+    z-index: 102;
+}
+.loading span{
+    height: 100%;
+    display: block;
+    transform: rotate(0deg);
+    animation: loading 0.5s infinite linear;
+    background: url(../images/common/loading.png) no-repeat;
+    background-size: 100%;
+}
+@keyframes loading{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 #wrap{
     width: 1200px;
     min-height: 1500px;
     margin: 25px 0;
 /*    height: 1500px;*/
     display: inline-block;
+    opacity: 0;
     
     border: 1px #000 solid;
     background-color: #fff;
     box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
     position: relative;
 }
+
 #wrap .mobile{
     display: none;
 }
