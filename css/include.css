@@ -243,10 +243,8 @@ select{
     box-sizing: border-box;
     overflow-y: scroll;
 }
-.m_gnb li{
-    padding: 2vw;
-}
 .m_gnb li a{
+    padding: 2vw;
     font-size: 5vw;
     font-weight: 400;
     display: block;
